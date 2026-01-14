@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+</head>
+
+<body>
+    <h1>Student Admission Form</h1>
+
+    <form>
+        <label for="">Student Name</label>
+        <input type="text" required minlength="3">
+        <br><br>
+        <label for="">Email Adress</label>
+        <input type="email" required>
+        <br><br>
+        <label for="">Phone Number</label>
+        <input type="number" required maxlength="10">
+        <br><br>
+        <label for="">Adress</label>
+        <textarea name="" id="" cols="30" rows="5" required></textarea>
+        <br><br>
+        <label for="">Select Course</label>
+        <select>
+            <option value="MERN STACK">MERN STACK</option>
+            <option value="DATA SCIENCE">DATA SCIENCE</option>
+            <option value="PYTHON DEVELOPMENT">PYTHON DEVELOPMENT</option>
+            <option value="JAVA DEVELOPMENT">JAVA DEVELOPMENT</option>
+        </select>
+        <br><br>
+        <label for="">College</label>
+        <input type="text" list="College">
+        <datalist id="College">
+            <option>BBD University</option>
+            <option>SRM University</option>
+            <option>Goel</option>
+            <option>Amity University</option>
+        </datalist>
+        <br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <br><br>
+        <input type="checkbox">
+        <label for="">I agree to the terms and conditions</label>
+        <br><br>
+        <details>
+            <summary>I agree to the terms and conditions</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+        </details>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
