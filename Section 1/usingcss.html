@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS</title>
+    <style>
+        h2 {
+            color: teal;
+            background-color: lightgray;
+        }
+
+        .text {
+            color: purple;
+            font-size: 50px;
+        }
+        #mytag {
+            color: green;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        h3 {
+            color: brown !important;
+            font-size: 30px;
+        }
+        .text2 {
+            color: orange;
+            font-size: 60px;
+        }
+        #myid {
+            color: blue;
+            font-size: 70px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 style="color: firebrick; font-size: 50px;">Inline CSS is used to style individual elemnts</h1>
+    <h2>Internal CSS is used to style page at once</h2>
+    <h2 class="text">Name Selector is used to style tags by their name</h2>
+    <p class="text">Class selector is used to style tags b their class name</p>
+    <p id="mytag">ID selector is used to style tags by their ID name</p>
+    <h3 class="text2" id="myid" style="color: chocolate;">CSS selectors priority</h3>
+    <button class="btn">submit</button>
+</body>
+
+</html>
