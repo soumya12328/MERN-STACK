@@ -1,52 +1,161 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<title>Document</title>
 
-<body>
-    <header>
+<body class="bg-indigo-200 md:bg-red-300 lg:bg-green-200 ">
 
-    </header>
+    <body>
+        <header class="text-gray-600 body-font  bg-black-400">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"
+                        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span class="ml-3 text-xl">Tailblocks</span>
+                </a>
+                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                    <a class="mr-5 hover:text-gray-900">First Link</a>
+                    <a class="mr-5 hover:text-gray-900">Second Link</a>
+                    <a class="mr-5 hover:text-gray-900">Third Link</a>
+                    <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+                </nav>
+                <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
 
-    <main>
+        <main>
+            <article>
+                <section class="bg-gray-200">
+                    <div class="px-8 md:px-0 container mx-auto ">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class=" space-y-4 my-auto text-center md:text-left ">
+                                <h1 class="text-5xl font-bold">Develop Your <br>
+                                    skills in a new<br>
+                                    a unique way</h1>
 
-        <article>
-            <section class="">
-                <div class="container  mx-auto ">
-                    <div class="grid grid-cols-2">
-                        <div class="space-y-4 my-auto">
-                            <h1 class="text-5xl font-bold">Develop your <br>
-                                skills in a new <br>
-                                and unique way</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Veniam itaque odio eius repellat a, quidem unde excepturi
-                                in ipsum recusandae dolores totam est iure mollitia
-                                explicabo molestiae, animi tenetur consequatur?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit blanditiis modi ipsa
+                                    fugit! Sunt a, vero nisi velit, ratione blanditiis unde facilis laudantium vel minus
+                                    ab
+                                    tenetur eius asperiores minima.</p>
 
-                            <div class="flex gap-5">
-                                <button
-                                    class="bg-gradient-to-br from-violet-400 to-pink-500 text-white px-4 py-2 rounded-md">Enroll
-                                    Now</button>
-                                <button>What's Etech</button>
+                                <div class="flex justify-center md:justify-start gap-5">
+                                    <button
+                                        class=" hover:scale-110 duration-500 bg-gradient-to-br from-violet-400 to-pink-400 text-white px-4 py-2 rounded-md">Enroll
+                                        Now</button>
+                                    <button class="hover:scale-110 duration-500">What's Etech</button>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img src="undraw_reading-a-book_4cap.svg" class="w-1/2 mx-auto" alt="">
                             </div>
                         </div>
-                        <div class="">
-                            <img src="undraw_reading-a-book_4cap.svg" class="w-1/2 mx-auto" alt="">
+                    </div>
+                </section>
+            </article>
+
+            <article>
+                <section class="bg-pink-50 py-20">
+                    <div class="px-10 md:px-0 mx-auto">
+                        <h2 class="text-center font-bold text-4xl">Search Courses</h2>
+
+                        <div class="flex justify-center gap-5 w-full  md:w-1/3 mt-10 mx-auto">
+
+                            <div class="relative flex-grow">
+                                <input type="text" class="bg-white pl-10 pr-6 py-4 rounded-lg flex-grow"
+                                    placeholder="Search for over 50+ courses" />
+
+                                <i class=" absolute top-5 left-3 fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <button class="bg-gradient-to-br from-violet-400 to-pink-500 px-6 py-4 text-white 
+                        rounded-lg text-xl">Search</button>
                         </div>
                     </div>
-                </div>
-            </section>
-        </article>
 
-    </main>
+                </section>
+                <section class="px-10 md:px-0 mx-auto py-10">
+                    <div class="grid grid-cols-12 gap-6">
 
-    <footer>
+                        <div class="col-span-12 md:col-span-4">
+                            <img class="w-full" 
+                            src="data:image/jpeg;base64,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"
+                                alt="">
+                        </div>
+                        <div class="col-span-12 md:col-span-8 ">
+                            <h3 class="text-3xl font-bold">
+                                <span class="text-violet-500">Benefits </span> From Our Online Learning
+                            </h3>
+                            <div class="mt-6 space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="bg-violet-500 text-white rounded-full size-18 p-2">
+                                        <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Online Degree</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
+                                            aperiam modi rerum natus animi non eligendi cupiditate, magni esse facere
+                                            quia iure, laborum tempore! Incidunt et corrupti ipsam voluptas.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="bg-pink-500 text-white rounded-full size-18 p-2">
+                                        <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Online Degree</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
+                                            aperiam modi rerum natus animi non eligendi cupiditate, magni esse facere
+                                            quia iure, laborum tempore! Incidunt et corrupti ipsam voluptas.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="bg-violet-500 text-white rounded-full size-18 p-2">
+                                        <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Online Degree</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
+                                            aperiam modi rerum natus animi non eligendi cupiditate, magni esse facere
+                                            quia iure, laborum tempore! Incidunt et corrupti ipsam voluptas.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="bg-pink-500 text-white rounded-full size-18 p-2">
+                                        <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Online Degree</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
+                                            aperiam modi rerum natus animi non eligendi cupiditate, magni esse facere
+                                            quia iure, laborum tempore! Incidunt et corrupti ipsam voluptas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
 
-    </footer>
-</body>
+        <footer>
+
+        </footer>
+    </body>
 
 </html>
