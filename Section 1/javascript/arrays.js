@@ -39,6 +39,8 @@ console.log(movies);
 movies.splice(3,2, 'flash', 'superman'); // removes 2 elements starting from index 3 and adds 'flash' and 'superman' at index 3
 console.log(movies);
 
+movies.splice(3,0, 'batman'); // adds 'batman' at index 2
+console.log(movies);
 
 
 
