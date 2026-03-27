@@ -1,6 +1,8 @@
 'use client'
+import axios from 'axios';
 import { useFormik } from 'formik'
 import React from 'react'
+import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
 const signupSchema = Yup.object().shape(
@@ -26,11 +28,22 @@ const SignUp = () => {
             password: '',
             confirmPassword: ''
         },
-        onSubmit: (values) => {
+        onSubmit: async (values) => {
             console.log(values);
             // send values to backend
+            const res = await axios.post('http://localhost:5000/user/add', values)
 
-        }
+            console.log(Rss.status);
+
+            if (res.status === 200) {
+                toast.success('signup successful');
+            } else {
+                toast.error('signup failed');
+            }
+
+        },
+        validationSchema: signupSchema
+
     });
 
     return (
@@ -101,8 +114,12 @@ const SignUp = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">Please include a valid email address so we can get back to you</p>
-                                </div>
+                                   {
+                                        (signupForm.errors.email && signupForm.touched.email) && (
+                                            <p className="hidden text-xs text-red-600 mt-2" id="email-error">{signupForm.errors.email}</p>
+                                        )
+                                    } 
+                                    </div>
                                 {/* End Form Group */}
 
                                 {/* Form Group */}
@@ -120,8 +137,12 @@ const SignUp = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="hidden text-xs text-red-600 mt-2" id="password-error">8+ characters required</p>
-                                </div>
+                                    {
+                                        (signupForm.errors.password && signupForm.touched.password) && (
+                                            <p className="hidden text-xs text-red-600 mt-2" id="email-error">{signupForm.errors.password}</p>
+                                        )
+                                    }
+                                    </div>
                                 {/* End Form Group */}
 
                                 {/* Form Group */}
