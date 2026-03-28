@@ -3,6 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 const Model = require('../models/userModel');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 // route or endpoint
 router.post('/add', (req, res) => {
@@ -45,7 +47,7 @@ router.delete('/delete/:id', (req, res) => {
 
 // update
 router.put('/update/:id', (req, res) => {
-    Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    Model.findByIdAndUpdate(req.params.id, req.body, { new: true })
         .then((result) => {
             res.status(200).json(result);
 
@@ -88,6 +90,43 @@ router.get('/getbyid/:id', (req, res) => {
         }).catch((err) => {
             console.log(err);
             res.status(500).json(err);
+        });
+});
+
+router.post('/authenticate', (req, res) => {
+    const { email, password } = req.body;
+
+    Model.findOne({ email, password })
+        .then((result) => {
+            // if login is succesfull
+            if (result) {
+
+                const { _id, email } = result;
+
+                jwt.sign(
+                    { _id, email },
+                    process.env.JWT_SECRET,
+                    { expiresIn: '1h' },
+                    (err, token) => {
+                        if (err) {
+                            console.log(err);
+                            res.status(500).json(err);
+
+                        } else {
+                            res.status(200).json({ token });
+                        }
+                    }
+                )
+
+            } else {
+                // is login fails
+                res.status(403).json({ message: 'Invalid Credentials' });
+            }
+
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+
         });
 });
 
